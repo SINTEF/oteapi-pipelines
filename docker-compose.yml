@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+
+  oteapi:
+    image: ghcr.io/emmc-asbl/oteapi:1.20240301.346
+    expose:
+      - 8080
+    ports:
+      - 8080:8080
+    environment:
+      OTEAPI_REDIS_TYPE: redis
+      OTEAPI_REDIS_HOST: redis
+      OTEAPI_REDIS_PORT: 6379
+      OTEAPI_prefix: "${OTEAPI_prefix:-/api/v1}"
+      # OTEAPI_PLUGIN_PACKAGES: git+https://github.com/EMMC-ASBL/oteapi-dlite#egg=oteapi-dlite       
+      OTEAPI_PLUGIN_PACKAGES: "-v -e /oteapi-dlite"
+    depends_on:
+      - redis
+    volumes:
+      - "./../oteapi-dlite:/oteapi-dlite"
+      - "./models:/oteapi-dlite/oteapi_dlite/entities"
+      - ".:/demo"
+    entrypoint: "./entrypoint.sh --reload"
+
+
+  redis:
+    image: redis:latest
+    volumes:
+      - redis-persist:/data
+
+volumes:
+  redis-persist:
+
+
