@@ -8,28 +8,18 @@ services:
       - 8080
     ports:
       - 8080:8080
+    depends_on:
+      - redis
     environment:
       OTEAPI_REDIS_TYPE: redis
       OTEAPI_REDIS_HOST: redis
       OTEAPI_REDIS_PORT: 6379
-      OTEAPI_prefix: "${OTEAPI_prefix:-/api/v1}"
-      # OTEAPI_PLUGIN_PACKAGES: git+https://github.com/EMMC-ASBL/oteapi-dlite#egg=oteapi-dlite       
-      OTEAPI_PLUGIN_PACKAGES: "-v -e /oteapi-dlite"
-    depends_on:
-      - redis
+      OTEAPI_prefix: "${OTEAPI_prefix:-/api/v1}"      
+      OTEAPI_PLUGIN_PACKAGES: git+https://github.com/EMMC-ASBL/oteapi-dlite@remove-session#egg=oteapi-dlite # NOTE! Branch under development
     volumes:
-      - "./../oteapi-dlite:/oteapi-dlite"
-      - "./models:/oteapi-dlite/oteapi_dlite/entities"
-      - ".:/demo"
+      - "./entities:/entities"
+      - "./output:/output"
     entrypoint: "./entrypoint.sh --reload"
-
 
   redis:
     image: redis:latest
-    volumes:
-      - redis-persist:/data
-
-volumes:
-  redis-persist:
-
-
