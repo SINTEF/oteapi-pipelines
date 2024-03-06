@@ -7,8 +7,8 @@ FAIR data documentation and the execution of dataflow pipelines.
 ## Prerequisites
 Before starting, ensure you have the following installed on your system:
 
-    * Docker and Docker Compose: For running the OTEAPI services and Redis in containers.
-    * Python 3: For setting up a virtual environment and running demo scripts.
+* Docker and Docker Compose: For running the OTEAPI services and Redis in containers.
+* Python 3: For setting up a virtual environment and running demo scripts.
 	
 ## Step 1: Start the OTEAPI Services and Redis
 
@@ -60,9 +60,9 @@ Similarly, to run the second demo:
 
 # Troubleshooting
 
-* *Docker Compose Errors*: Ensure Docker is running on your system. If you encounter permission issues, try running the command with sudo.
- * *Python Virtual Environment*: If you have multiple Python versions installed, ensure you're using Python 3 by replacing python3 with the specific version you want to use, e.g., python3.11.
-* *Dependency Installation Issues*: Ensure you're in the activated virtual environment before installing dependencies. If you encounter any issues, consider upgrading pip using pip install --upgrade pip and try again.
+* **Docker Compose Errors**: Ensure Docker is running on your system. If you encounter permission issues, try running the command with sudo.
+* **Python Virtual Environment**: If you have multiple Python versions installed, ensure you're using Python 3 by replacing python3 with the specific version you want to use, e.g., python3.11.
+* **Dependency Installation Issues**: Ensure you're in the activated virtual environment before installing dependencies. If you encounter any issues, consider upgrading pip using pip install --upgrade pip and try again.
 	
 # Conclusion
 You've now successfully set up the environment and run the OTEAPI demo scripts. These demos are designed to illustrate the capabilities and ease of integration offered by the OTEAPI framework. Explore the scripts to better understand how OTEAPI works and how it can be adapted for your data integration needs.
