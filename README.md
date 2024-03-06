@@ -12,8 +12,8 @@ Before starting, ensure you have the following installed on your system:
 	
 ## Step 1: Start the OTEAPI Services and Redis
 
-    1. Open a terminal and navigate to the directory containing the docker-compose.yml file.
-    2. Run the following command to start the OTEAPI services and Redis using Docker Compose:
+1. Open a terminal and navigate to the directory containing the docker-compose.yml file.
+2. Run the following command to start the OTEAPI services and Redis using Docker Compose:
 
 	```bash
 	docker compose up -d
