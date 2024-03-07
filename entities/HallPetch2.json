@@ -15,7 +15,7 @@
         },
         "d2": {
             "type": "float",
-            "unit": "m",
+            "unit": "cm",
             "description": "Average grain diameter"
         }
     }
