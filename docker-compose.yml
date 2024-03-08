@@ -19,7 +19,23 @@ services:
     volumes:
       - "./entities:/entities"
       - "./output:/output"
-    entrypoint: "./entrypoint.sh --reload"
+      - "./config/entrypoint.sh:/app/entrypoint.sh"
 
+  fuseki:
+    image: secoresearch/fuseki
+    ports:
+      - "3030:3030"
+    environment:
+      ENABLE_DATA_WROTE: true
+      ENABLE_UPLOAD: true
+      ENABLE_UPDATE: true
+      QUERY_TIMEOUT: 5000
+      ADMIN_PASSWORD: "secret"
+    volumes:
+      - "fusekidata:/fuseki-base/databases"
+      - "./config/shiro.ini:/jena-fuseki/shiro.ini"
   redis:
     image: redis:latest
+
+volumes:
+  fusekidata:

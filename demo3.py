@@ -27,7 +27,7 @@ try:
     parser = client.create_parser(
         entity="http://onto-ns.com/meta/0.4/HallPetch",
         parserType="json/vnd.dlite-json",
-        configuration={"storage_path": "/entities"},
+        configuration={"storagePath": "/entities"},
     )
     print(parser.strategy_id)
 except Exception as e:
@@ -54,7 +54,16 @@ try:
             "http://hall_petch.info/hp.GrainSize",
         ),
     ]
-    mapping = client.create_mapping(mappingType="mappings", triples=dataMappings)
+    mapping = client.create_mapping(
+        mappingType="mappings",
+        triples=dataMappings,
+        configuration=dict(
+            backend="fuseki",
+            base_iri="http://onto-ns.com/meta#",
+            triplestore_url="http://localhost:3030",
+            database="otedemo",
+        ),
+    )
     print(mapping.strategy_id)
 except Exception as e:
     print(f"Error creating mapping: {e}")
@@ -78,7 +87,16 @@ try:
             "http://hall_petch.info/hp.GrainSize",
         ),
     ]
-    mapping2 = client.create_mapping(mappingType="mappings", triples=dataMappings2)
+    mapping2 = client.create_mapping(
+        mappingType="mappings",
+        triples=dataMappings2,
+        configuration=dict(
+            backend="fuseki",
+            base_iri="http://onto-ns.com/meta",
+            triplestore_url="http://localhost:3030/otedemo/",
+            database="otedemo",
+        ),
+    )
     print(mapping2.strategy_id)
 except Exception as e:
     print(f"Error creating second mapping: {e}")
