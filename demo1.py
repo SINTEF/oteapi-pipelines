@@ -32,7 +32,7 @@ try:
     pipeline = data_resource >> parser
 
     # Execute the pipeline to fetch and parse the data, then decode the result from bytes to a string.
-    result = pipeline.get().decode('utf-8')
+    result = pipeline.get().decode("utf-8")
 
     # Load the string result into a JSON object for further manipulation or analysis.
     json_object = json.loads(result)
@@ -42,4 +42,4 @@ try:
     print("Formatted JSON Result:\n", json_formatted_str)
 
 except Exception as e:
-    print("An error occurred:", e)    
+    print("An error occurred:", e)
