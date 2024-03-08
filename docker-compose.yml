@@ -14,8 +14,8 @@ services:
       OTEAPI_REDIS_TYPE: redis
       OTEAPI_REDIS_HOST: redis
       OTEAPI_REDIS_PORT: 6379
-      OTEAPI_prefix: "${OTEAPI_prefix:-/api/v1}"      
-      OTEAPI_PLUGIN_PACKAGES: git+https://github.com/EMMC-ASBL/oteapi-dlite@remove-session#egg=oteapi-dlite # NOTE! Branch under development
+      OTEAPI_prefix: "${OTEAPI_prefix:-/api/v1}"   
+      OTEAPI_PLUGIN_PACKAGES: git+https://github.com/EMMC-ASBL/oteapi-dlite@hotfix/remove-session/mapping-fuseki#egg=oteapi-dlite # NOTE! Branch under development
     volumes:
       - "./entities:/entities"
       - "./output:/output"
@@ -34,6 +34,8 @@ services:
     volumes:
       - "fusekidata:/fuseki-base/databases"
       - "./config/shiro.ini:/jena-fuseki/shiro.ini"
+      - "./config/otedemo.ttl:/fuseki-base/configuration/otedemo.ttl"
+
   redis:
     image: redis:latest
 
