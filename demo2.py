@@ -13,7 +13,7 @@ print(client)
 # The URL, media type, and resource type are defined.
 try:
     data_resource = client.create_dataresource(
-        downloadUrl="https://raw.githubusercontent.com/Treesarj/Test/main/test.json",
+        downloadUrl="https://raw.githubusercontent.com/SINTEF/oteapi-pipelines/main/input/hallpetch.json",
         mediaType="application/json",
         resourceType="resource/url",
     )

@@ -19,19 +19,7 @@ services:
     volumes:
       - "./entities:/entities"
       - "./output:/output"
-      - "./config/entrypoint.sh:/app/entrypoint.sh"
-
-  fuseki:
-    image: secoresearch/fuseki
-    ports:
-      - "3030:3030"
-    volumes:
-      - "fusekidata:/fuseki-base/databases"
-      - "./config/shiro.ini:/jena-fuseki/shiro.ini"
-      - "./config/otedemo.ttl:/fuseki-base/configuration/otedemo.ttl"
 
   redis:
     image: redis:latest
 
-volumes:
-  fusekidata:

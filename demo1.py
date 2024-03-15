@@ -11,7 +11,7 @@ try:
 
     # Define a data resource from a public URL containing JSON data.
     data_resource = client.create_dataresource(
-        downloadUrl="https://raw.githubusercontent.com/EMMC-ASBL/oteapi-core/master/tests/static/sample2.json",
+        downloadUrl="https://raw.githubusercontent.com/SINTEF/oteapi-pipelines/main/input/hallpetch.json",
         mediaType="application/json",
         resourceType="resource/url",
     )
