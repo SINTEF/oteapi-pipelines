@@ -62,7 +62,14 @@ Similarly, to run the second demo:
 `bash
 	python demo2.py
 	`
+### Demo3
 
+This demonstrates how to use the function ontology(FO). In this example the function relations are stored in the input folder at triplestore.ttl
+
+Similarly, to run the third demo:
+`bash
+	python demo3.py
+	`
 # Troubleshooting
 
 - **Docker Compose Errors**: Ensure Docker is running on your system. If you encounter permission issues, try running the command with sudo.
