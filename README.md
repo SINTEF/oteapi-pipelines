@@ -64,7 +64,7 @@ Similarly, to run the second demo:
 	`
 ### Demo3
 
-This demonstrates how to use the function ontology(FO). In this example the function relations are stored in the input folder at triplestore.ttl
+This demonstrates how to use the function ontology(FO). In this example the function relations are added as a mapping to the pipeline .. which is not the right way. Eventually we would want to connect to a running triple store.
 
 Similarly, to run the third demo:
 `bash

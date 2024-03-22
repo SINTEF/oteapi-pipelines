@@ -93,6 +93,7 @@ try:
 except Exception as e:
     print(f"Error creating second mapping: {e}")
 
+# function mappings --> but eventually this be extracted from a triplestore
 try:
     function_ontology_mappings = [
         (
