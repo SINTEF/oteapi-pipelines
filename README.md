@@ -70,6 +70,14 @@ Similarly, to run the third demo:
 `bash
 	python demo3.py
 	`
+### Demo4
+
+This extracts the subset of the data.¨
+
+Similarly, to run the third demo:
+`bash
+	python demo4.py
+   `
 # Troubleshooting
 
 - **Docker Compose Errors**: Ensure Docker is running on your system. If you encounter permission issues, try running the command with sudo.
