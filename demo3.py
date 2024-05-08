@@ -25,7 +25,7 @@ except Exception as e:
 # Additionally, a configuration for the storage path is provided.
 try:
     parser = client.create_parser(
-        entity="http://onto-ns.com/meta/0.4/HallPetch",
+        entity="http://onto-ns.com/meta/vipcoat/0.4/HallPetch",
         parserType="json/vnd.dlite-json",
         configuration={"storage_path": "/entities"},
     )
@@ -39,7 +39,7 @@ except Exception as e:
 try:
     dataMappings = [
         (
-            "http://onto-ns.com/meta/0.4/HallPetch#theta0",
+            "http://onto-ns.com/meta/vipcoat/0.4/HallPetch#theta0",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://hall_petch.info/YieldStrength",
         ),
@@ -49,12 +49,12 @@ try:
             "http://fun.info#v",
         ),
         (
-            "http://onto-ns.com/meta/0.4/HallPetch#k",
+            "http://onto-ns.com/meta/vipcoat/0.4/HallPetch#k",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://hall_petch.info/hp.Coefficient",
         ),
         (
-            "http://onto-ns.com/meta/0.4/HallPetch#d",
+            "http://onto-ns.com/meta/vipcoat/0.4/HallPetch#d",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://hall_petch.info/hp.GrainSize",
         ),
@@ -68,7 +68,7 @@ except Exception as e:
 try:
     dataMappings2 = [
         (
-            "http://onto-ns.com/meta/0.4/HallPetch2#theta02",
+            "http://onto-ns.com/meta/vipcoat/0.4/HallPetch2#theta02",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://hall_petch.info/YieldStrengthsqrt",
         ),
@@ -78,12 +78,12 @@ try:
             "http://fun.info#ret",
         ),
         (
-            "http://onto-ns.com/meta/0.4/HallPetch2#k2",
+            "http://onto-ns.com/meta/vipcoat/0.4/HallPetch2#k2",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://hall_petch.info/hp.Coefficient",
         ),
         (
-            "http://onto-ns.com/meta/0.4/HallPetch2#d2",
+            "http://onto-ns.com/meta/vipcoat/0.4/HallPetch2#d2",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://hall_petch.info/hp.GrainSize",
         ),
@@ -97,82 +97,82 @@ except Exception as e:
 try:
     function_ontology_mappings = [
         (
-            "http://onto-ns.com/meta/0.4/HallPetch2#doubletheta",
+            "http://onto-ns.com/meta/vipcoat/0.4/HallPetch2#doubletheta",
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
             "https://w3id.org/function/ontology#Function",
         ),
         (
-            "http://onto-ns.com/meta/0.4/HallPetch2#doubletheta",
+            "http://onto-ns.com/meta/vipcoat/0.4/HallPetch2#doubletheta",
             "http://www.w3.org/2000/01/rdf-schema#label",
             '"doubletheta"@en',
         ),
         (
-            "http://onto-ns.com/meta/0.4/HallPetch2#doubletheta",
+            "http://onto-ns.com/meta/vipcoat/0.4/HallPetch2#doubletheta",
             "https://w3id.org/function/ontology#expects",
-            "_:http://onto-ns.com/meta/0.4/HallPetch2#doubletheta_parlist",
+            "_:http://onto-ns.com/meta/vipcoat/0.4/HallPetch2#doubletheta_parlist",
         ),
         (
-            "http://onto-ns.com/meta/0.4/HallPetch2#doubletheta",
+            "http://onto-ns.com/meta/vipcoat/0.4/HallPetch2#doubletheta",
             "https://w3id.org/function/ontology#returns",
-            "_:http://onto-ns.com/meta/0.4/HallPetch2#doubletheta_outlist",
+            "_:http://onto-ns.com/meta/vipcoat/0.4/HallPetch2#doubletheta_outlist",
         ),
         (
-            "http://onto-ns.com/meta/0.4/HallPetch2#doubletheta_parameter1_v",
+            "http://onto-ns.com/meta/vipcoat/0.4/HallPetch2#doubletheta_parameter1_v",
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
             "https://w3id.org/function/ontology#Parameter",
         ),
         (
-            "http://onto-ns.com/meta/0.4/HallPetch2#doubletheta_parameter1_v",
+            "http://onto-ns.com/meta/vipcoat/0.4/HallPetch2#doubletheta_parameter1_v",
             "http://www.w3.org/2000/01/rdf-schema#label",
             '"v"@en',
         ),
         (
-            "http://onto-ns.com/meta/0.4/HallPetch2#doubletheta_parameter1_v",
+            "http://onto-ns.com/meta/vipcoat/0.4/HallPetch2#doubletheta_parameter1_v",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://fun.info#v",
         ),
         (
-            "_:http://onto-ns.com/meta/0.4/HallPetch2#doubletheta_parlist",
+            "_:http://onto-ns.com/meta/vipcoat/0.4/HallPetch2#doubletheta_parlist",
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
-            "http://onto-ns.com/meta/0.4/HallPetch2#doubletheta_parameter1_v",
+            "http://onto-ns.com/meta/vipcoat/0.4/HallPetch2#doubletheta_parameter1_v",
         ),
         (
-            "_:http://onto-ns.com/meta/0.4/HallPetch2#doubletheta_parlist",
+            "_:http://onto-ns.com/meta/vipcoat/0.4/HallPetch2#doubletheta_parlist",
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#nil",
         ),
         (
-            "http://onto-ns.com/meta/0.4/HallPetch2#doubletheta_output1",
+            "http://onto-ns.com/meta/vipcoat/0.4/HallPetch2#doubletheta_output1",
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
             "https://w3id.org/function/ontology#Output",
         ),
         (
-            "http://onto-ns.com/meta/0.4/HallPetch2#doubletheta_output1",
+            "http://onto-ns.com/meta/vipcoat/0.4/HallPetch2#doubletheta_output1",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://fun.info#ret",
         ),
         (
-            "_:http://onto-ns.com/meta/0.4/HallPetch2#doubletheta_outlist",
+            "_:http://onto-ns.com/meta/vipcoat/0.4/HallPetch2#doubletheta_outlist",
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
-            "http://onto-ns.com/meta/0.4/HallPetch2#doubletheta_output1",
+            "http://onto-ns.com/meta/vipcoat/0.4/HallPetch2#doubletheta_output1",
         ),
         (
-            "_:http://onto-ns.com/meta/0.4/HallPetch2#doubletheta_outlist",
+            "_:http://onto-ns.com/meta/vipcoat/0.4/HallPetch2#doubletheta_outlist",
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#nil",
         ),
         (
-            "http://onto-ns.com/meta/0.4/HallPetch2#doubletheta",
+            "http://onto-ns.com/meta/vipcoat/0.4/HallPetch2#doubletheta",
             "http://emmo.info/oteio#hasPythonFunctionName",
             "square_root",
         ),
         (
-            "http://onto-ns.com/meta/0.4/HallPetch2#doubletheta",
+            "http://onto-ns.com/meta/vipcoat/0.4/HallPetch2#doubletheta",
             "http://emmo.info/oteio#hasPythonModuleName",
             "src.mymath.util",
         ),
         (
-            "http://onto-ns.com/meta/0.4/HallPetch2#doubletheta",
+            "http://onto-ns.com/meta/vipcoat/0.4/HallPetch2#doubletheta",
             "http://emmo.info/oteio#hasPypiPackageName",
             "git+https://github.com/quaat/treesa_math",
         ),
@@ -190,7 +190,7 @@ try:
         configuration={
             "driver": "json",
             "location": "/output/hp.json",
-            "datamodel": "http://onto-ns.com/meta/0.4/HallPetch2",
+            "datamodel": "http://onto-ns.com/meta/vipcoat/0.4/HallPetch2",
         },
     )
     print(generate.strategy_id)

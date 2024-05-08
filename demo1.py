@@ -24,7 +24,7 @@ except Exception as e:
 
 try:
     parser = client.create_parser(
-        entity="http://onto-ns.com/meta/0.4/HallPetch",
+        entity="http://onto-ns.com/meta/vipcoat/0.4/HallPetch",
         parserType="mpr",
         configuration={"storage_path": "/entities"},
     )

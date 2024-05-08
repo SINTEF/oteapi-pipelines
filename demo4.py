@@ -25,7 +25,7 @@ except Exception as e:
 # Additionally, a configuration for the storage path is provided.
 try:
     parser = client.create_parser(
-        entity="http://onto-ns.com/meta/0.4/HallPetch",
+        entity="http://onto-ns.com/meta/vipcoat/0.4/HallPetch",
         parserType="json/vnd.dlite-json",
         configuration={"storage_path": "/entities"},
     )
@@ -39,17 +39,17 @@ except Exception as e:
 try:
     dataMappings = [
         (
-            "http://onto-ns.com/meta/0.4/HallPetch#theta0",
+            "http://onto-ns.com/meta/vipcoat/0.4/HallPetch#theta0",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://hall_petch.info/hp.YeildStrength",
         ),
         (
-            "http://onto-ns.com/meta/0.4/HallPetch#k",
+            "http://onto-ns.com/meta/vipcoat/0.4/HallPetch#k",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://hall_petch.info/hp.Coefficient",
         ),
         (
-            "http://onto-ns.com/meta/0.4/HallPetch#d",
+            "http://onto-ns.com/meta/vipcoat/0.4/HallPetch#d",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://hall_petch.info/hp.GrainSize",
         ),
@@ -63,12 +63,12 @@ except Exception as e:
 try:
     dataMappings2 = [
         (
-            "http://onto-ns.com/meta/0.4/HallPetch3#theta03",
+            "http://onto-ns.com/meta/vipcoat/0.4/HallPetch3#theta03",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://hall_petch.info/hp.YeildStrength",
         ),
         (
-            "http://onto-ns.com/meta/0.4/HallPetch3#k3",
+            "http://onto-ns.com/meta/vipcoat/0.4/HallPetch3#k3",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://hall_petch.info/hp.Coefficient",
         ),
@@ -85,7 +85,7 @@ try:
         configuration={
             "driver": "json",
             "location": "/output/hp.json",
-            "datamodel": "http://onto-ns.com/meta/0.4/HallPetch3",
+            "datamodel": "http://onto-ns.com/meta/vipcoat/0.4/HallPetch3",
         },
     )
     print(generate.strategy_id)
