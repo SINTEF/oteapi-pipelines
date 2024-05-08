@@ -1,0 +1,47 @@
+{
+  "uri": "https://vipcoat-oip.com/minio/vipcoatbucket/data_models/vipcoat_LPR_properties.json",
+  "description": "LPR",
+  "dimensions": [
+    {
+      "name": "nrows",
+      "description": "Number of elements (i.e. number or rows)."
+    }
+  ],
+  "properties": [
+    {
+      "name": "Time",
+      "type": "float",
+      "dims": ["nrows"],
+      "unit": "s",
+      "description": "Time in seconds,time/s"
+    },
+    {
+      "name": "Electrode_potential",
+      "type": "float",
+      "dims": ["nrows"],
+      "unit": "V",
+      "description": "WE potential versus REF,Ewe/V"
+    },
+    {
+      "name": "Flags",
+      "type": "int",
+      "dims": ["nrows"],
+      "unit": "-",
+      "description": "Flags."
+    },
+    {
+      "name": "Control_voltage",
+      "type": "float",
+      "dims": ["nrows"],
+      "unit": "V",
+      "description": "Potential control."
+    },
+    {
+      "name": "Current",
+      "type": "float",
+      "dims": ["nrows"],
+      "unit": "A",
+      "description": "The current."
+    }
+  ]
+}

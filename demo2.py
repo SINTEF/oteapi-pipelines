@@ -107,7 +107,7 @@ try:
     # Convert the result into a JSON object and then format it for readability.
     json_object = json.loads(result)
     json_formatted = json.dumps(json_object, indent=4)
-    print(json_formatted)
+    print(json_formatted["properties"].keys())
 
     # Inform the user that the data has been processed and output is written.
     print("Data is written out to output/hp.json")

@@ -12,11 +12,6 @@
             "type": "float",
             "unit": "MPa*m^(1/2)",
             "description": "Hall-Petch slope"
-        },
-        "d2": {
-            "type": "float",
-            "unit": "cm",
-            "description": "Average grain diameter"
         }
     }
 }

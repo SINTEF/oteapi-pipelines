@@ -1,0 +1,26 @@
+{
+  "uri": "https://vipcoat-oip.com/minio/vipcoatbucket/data_models/vipcoat_fetch_properties.json",
+  "description": "fetch data for simulation",
+  "dimensions": [
+    {
+      "name": "nrows",
+      "description": "Number of elements (i.e. number or rows)."
+    }
+  ],
+  "properties": [
+    {
+      "name": "Time2",
+      "type": "float",
+      "dims": ["nrows"],
+      "unit": "s",
+      "description": "Time in seconds,time/s"
+    },
+    {
+      "name": "Average_electrode_potential",
+      "type": "float",
+      "dims": ["nrows"],
+      "unit": "V",
+      "description": "The averaged Ewe value for each frequency,<Ewe>/V"
+    }
+  ]
+}

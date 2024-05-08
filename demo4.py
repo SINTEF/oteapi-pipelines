@@ -71,7 +71,7 @@ try:
             "http://onto-ns.com/meta/0.4/HallPetch3#k3",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://hall_petch.info/hp.Coefficient",
-        )
+        ),
     ]
     mapping2 = client.create_mapping(mappingType="mappings", triples=dataMappings2)
     print(mapping2.strategy_id)

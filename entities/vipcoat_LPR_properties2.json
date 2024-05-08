@@ -1,0 +1,26 @@
+{
+  "uri": "https://vipcoat-oip.com/minio/vipcoatbucket/data_models/vipcoat_LPR_properties2.json",
+  "description": "LPR",
+  "dimensions": [
+    {
+      "name": "nrows",
+      "description": "Number of elements (i.e. number or rows)."
+    }
+  ],
+  "properties": [
+    {
+      "name": "Time",
+      "type": "float",
+      "dims": ["nrows"],
+      "unit": "s",
+      "description": "Time in seconds,time/s"
+    },
+    {
+      "name": "Control_voltage",
+      "type": "float",
+      "dims": ["nrows"],
+      "unit": "V",
+      "description": "Potential control."
+    }
+  ]
+}
