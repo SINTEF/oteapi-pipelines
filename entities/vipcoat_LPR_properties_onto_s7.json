@@ -1,0 +1,38 @@
+{
+  "uri": "http://onto-ns.com/meta/vipcoat/1.0/LPR_properties",
+  "description": "LPR",
+  "dimensions": {
+    "nrows": "Number of elements (i.e. number or rows)."
+  },
+  "properties": {
+    "Time": {
+      "type": "float",
+      "shape": ["nrows"],
+      "unit": "s",
+      "description": "Time in seconds,time/s"
+    },
+    "Electrode_potential": {
+      "type": "float",
+      "shape": ["nrows"],
+      "unit": "V",
+      "description": "WE potential versus REF,Ewe/V"
+    },
+    "Flags": {
+      "type": "int",
+      "shape": ["nrows"],
+      "description": "Flags."
+    },
+    "Control_voltage": {
+      "type": "float",
+      "shape": ["nrows"],
+      "unit": "V",
+      "description": "Potential control."
+    },
+    "Current": {
+      "type": "float",
+      "shape": ["nrows"],
+      "unit": "mA",
+      "description": "The current."
+    }
+  }
+}

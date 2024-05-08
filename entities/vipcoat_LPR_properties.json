@@ -26,7 +26,6 @@
       "name": "Flags",
       "type": "int",
       "dims": ["nrows"],
-      "unit": "-",
       "description": "Flags."
     },
     {
