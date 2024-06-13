@@ -13,12 +13,12 @@ print(client)
 try:
     dataMappings_density = [
         (
-            "http://onto-ns.com/1/ctd_density_munkholmen#density",
+            "http://onto-ns.com/meta/oceanlab/1/ctd_density_munkholmen#density",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#sea_water_density",
         ),
         (
-            "http://onto-ns.com/1/ctd_density_munkholmen#time",
+            "http://onto-ns.com/meta/oceanlab/1/ctd_density_munkholmen#time",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://www.wikidata.org/entity/Q186885",
         ),
@@ -33,12 +33,12 @@ except Exception as e:
 try:
     dataMappings_pressure = [
         (
-            "http://onto-ns.com/1/ctd_pressure_munkholmen#pressure",
+            "http://onto-ns.com/meta/oceanlab/1/ctd_pressure_munkholmen#pressure",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#sea_water_pressure",
         ),
         (
-            "http://onto-ns.com/1/ctd_pressure_munkholmen#time",
+            "http://onto-ns.com/meta/oceanlab/1/ctd_pressure_munkholmen#time",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://www.wikidata.org/entity/Q186885",
         ),
@@ -53,12 +53,12 @@ except Exception as e:
 try:
     dataMappings_salinity = [
         (
-            "http://onto-ns.com/1/ctd_salinity_munkholmen#salinity",
+            "http://onto-ns.com/meta/oceanlab/1/ctd_salinity_munkholmen#salinity",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#sea_water_practical_salinity",
         ),
         (
-            "http://onto-ns.com/1/ctd_salinity_munkholmen#time",
+            "http://onto-ns.com/meta/oceanlab/1/ctd_salinity_munkholmen#time",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://www.wikidata.org/entity/Q186885",
         ),
@@ -73,12 +73,12 @@ except Exception as e:
 try:
     dataMappings_temperature = [
         (
-            "http://onto-ns.com/1/ctd_temperature_munkholmen#temperature",
+            "http://onto-ns.com/meta/oceanlab/1/ctd_temperature_munkholmen#temperature",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#sea_water_temperature",
         ),
         (
-            "http://onto-ns.com/1/ctd_temperature_munkholmen#time",
+            "http://onto-ns.com/meta/oceanlab/1/ctd_temperature_munkholmen#time",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://www.wikidata.org/entity/Q186885",
         ),
@@ -93,12 +93,12 @@ except Exception as e:
 try:
     dataMappings_conductivity = [
         (
-            "http://onto-ns.com/1/ctd_conductivity_munkholmen#conductivity",
+            "http://onto-ns.com/meta/oceanlab/1/ctd_conductivity_munkholmen#conductivity",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#sea_water_electrical_conductivity",
         ),
         (
-            "http://onto-ns.com/1/ctd_conductivity_munkholmen#time",
+            "http://onto-ns.com/meta/oceanlab/1/ctd_conductivity_munkholmen#time",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://www.wikidata.org/entity/Q186885",
         ),
@@ -115,32 +115,32 @@ except Exception as e:
 try:
     dataMappings_result = [
         (
-            "http://onto-ns.com/1/ctd_data_munkholmen#temperature",
+            "http://onto-ns.com/meta/oceanlab/1/ctd_data_munkholmen#temperature",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#sea_water_temperature",
         ),
         (
-            "http://onto-ns.com/1/ctd_data_munkholmen#salinity",
+            "http://onto-ns.com/meta/oceanlab/1/ctd_data_munkholmen#salinity",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#sea_water_practical_salinity",
         ),
         (
-            "http://onto-ns.com/1/ctd_data_munkholmen#pressure",
+            "http://onto-ns.com/meta/oceanlab/1/ctd_data_munkholmen#pressure",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#sea_water_pressure",
         ),
         (
-            "http://onto-ns.com/1/ctd_data_munkholmen#conductivity",
+            "http://onto-ns.com/meta/oceanlab/1/ctd_data_munkholmen#conductivity",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#sea_water_electrical_conductivity",
         ),
         (
-            "http://onto-ns.com/1/ctd_data_munkholmen#density",
+            "http://onto-ns.com/meta/oceanlab/1/ctd_data_munkholmen#density",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#sea_water_density",
         ),
         (
-            "http://onto-ns.com/1/ctd_data_munkholmen#time",
+            "http://onto-ns.com/meta/oceanlab/1/ctd_data_munkholmen#time",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://www.wikidata.org/entity/Q186885",
         ),
