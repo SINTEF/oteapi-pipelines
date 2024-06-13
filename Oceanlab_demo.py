@@ -20,7 +20,7 @@ try:
         (
             "http://onto-ns.com/1/ctd_density_munkholmen#time",
             "http://emmo.info/domain-mappings#mapsTo",
-            "http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#timestamp",
+            "http://www.wikidata.org/entity/Q186885",
         ),
     ]
     mapping_density = client.create_mapping(
@@ -40,7 +40,7 @@ try:
         (
             "http://onto-ns.com/1/ctd_pressure_munkholmen#time",
             "http://emmo.info/domain-mappings#mapsTo",
-            "http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#timestamp",
+            "http://www.wikidata.org/entity/Q186885",
         ),
     ]
     mapping_pressure = client.create_mapping(
@@ -60,7 +60,7 @@ try:
         (
             "http://onto-ns.com/1/ctd_salinity_munkholmen#time",
             "http://emmo.info/domain-mappings#mapsTo",
-            "http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#timestamp",
+            "http://www.wikidata.org/entity/Q186885",
         ),
     ]
     mapping_salinity = client.create_mapping(
@@ -80,7 +80,7 @@ try:
         (
             "http://onto-ns.com/1/ctd_temperature_munkholmen#time",
             "http://emmo.info/domain-mappings#mapsTo",
-            "http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#timestamp",
+            "http://www.wikidata.org/entity/Q186885",
         ),
     ]
     mapping_temperature = client.create_mapping(
@@ -100,7 +100,7 @@ try:
         (
             "http://onto-ns.com/1/ctd_conductivity_munkholmen#time",
             "http://emmo.info/domain-mappings#mapsTo",
-            "http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#timestamp",
+            "http://www.wikidata.org/entity/Q186885",
         ),
     ]
     mapping_conductivity = client.create_mapping(
@@ -142,7 +142,7 @@ try:
         (
             "http://onto-ns.com/1/ctd_data_munkholmen#time",
             "http://emmo.info/domain-mappings#mapsTo",
-            "http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#timestamp",
+            "http://www.wikidata.org/entity/Q186885",
         ),
     ]
     mapping_for_results = client.create_mapping(
