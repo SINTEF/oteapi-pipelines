@@ -1,0 +1,24 @@
+{
+    "uri": "http://onto-ns.com/1/ctd_temperature_munkholmen",
+    "description": "ctd_temperature_munkholmen",
+    "dimensions": {
+        "N": "Number of samples"
+    },
+    "properties": {
+        "temperature": {
+            "type": "float",
+            "unit": "Cel",
+            "shape": [
+                "N"
+            ],
+            "description": "temperature"
+        },
+        "time": {
+            "type": "datetime",
+            "shape": [
+                "N"
+            ],
+            "description": "timestamp"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "uri": "http://onto-ns.com/1/ctd_pressure_munkholmen",
+    "description": "ctd_pressure_munkholmen",
+    "dimensions": {
+        "N": "Number of samples"
+    },
+    "properties": {
+        "pressure": {
+            "type": "float",
+            "unit": "none",
+            "shape": [
+                "N"
+            ],
+            "description": "pressure"
+        },
+        "time": {
+            "type": "datetime",
+            "shape": [
+                "N"
+            ],
+            "description": "timestamp"
+        }
+    }
+}

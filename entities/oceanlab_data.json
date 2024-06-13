@@ -1,0 +1,56 @@
+{
+    "uri": "http://onto-ns.com/1/ctd_data_munkholmen",
+    "description": "ctd_data_munkholmen",
+    "dimensions": {
+        "N": "Number of samples"
+    },
+    "properties": {
+        "conductivity": {
+            "type": "float",
+            "unit": "S/m",
+            "shape": [
+                "N"
+            ],
+            "description": "conductivity"
+        },
+        "density": {
+            "type": "float",
+            "unit": "kg/cm³",
+            "shape": [
+                "N"
+            ],
+            "description": "density"
+        },
+        "pressure": {
+            "type": "float",
+            "unit": "none",
+            "shape": [
+                "N"
+            ],
+            "description": "pressure"
+        },
+        "salinity": {
+            "type": "float",
+            "unit": "PSU",
+            "shape": [
+                "N"
+            ],
+            "description": "salinity"
+        },
+        "temperature": {
+            "type": "float",
+            "unit": "Cel",
+            "shape": [
+                "N"
+            ],
+            "description": "temperature"
+        },
+        "time": {
+            "type": "datetime",
+            "shape": [
+                "N"
+            ],
+            "description": "timestamp"
+        }
+    }
+}

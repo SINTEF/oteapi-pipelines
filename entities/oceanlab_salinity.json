@@ -1,0 +1,24 @@
+{
+    "uri": "http://onto-ns.com/1/ctd_salinity_munkholmen",
+    "description": "ctd_salinity_munkholmen",
+    "dimensions": {
+        "N": "Number of samples"
+    },
+    "properties": {
+        "salinity": {
+            "type": "float",
+            "unit": "PSU",
+            "shape": [
+                "N"
+            ],
+            "description": "salinity"
+        },
+        "time": {
+            "type": "datetime",
+            "shape": [
+                "N"
+            ],
+            "description": "timestamp"
+        }
+    }
+}
