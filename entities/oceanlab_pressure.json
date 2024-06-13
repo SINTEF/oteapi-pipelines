@@ -1,5 +1,5 @@
 {
-    "uri": "http://onto-ns.com/1/ctd_pressure_munkholmen",
+    "uri": "http://onto-ns.com/meta/oceanlab/1/ctd_pressure_munkholmen",
     "description": "ctd_pressure_munkholmen",
     "dimensions": {
         "N": "Number of samples"
@@ -7,7 +7,6 @@
     "properties": {
         "pressure": {
             "type": "float",
-            "unit": "none",
             "shape": [
                 "N"
             ],

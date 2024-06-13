@@ -1,5 +1,5 @@
 {
-    "uri": "http://onto-ns.com/1/ctd_density_munkholmen",
+    "uri": "http://onto-ns.com/meta/oceanlab/1/ctd_density_munkholmen",
     "description": "ctd_density_munkholmen",
     "dimensions": {
         "N": "Number of samples"
@@ -7,7 +7,7 @@
     "properties": {
         "density": {
             "type": "float",
-            "unit": "kg/cm³",
+            "unit": "kg/cm^3",
             "shape": [
                 "N"
             ],

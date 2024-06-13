@@ -1,5 +1,5 @@
 {
-    "uri": "http://onto-ns.com/1/ctd_conductivity_munkholmen",
+    "uri": "http://onto-ns.com/meta/oceanlab/1/ctd_conductivity_munkholmen",
     "description": "ctd_conductivity_munkholmen",
     "dimensions": {
         "N": "Number of samples"

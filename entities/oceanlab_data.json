@@ -1,5 +1,5 @@
 {
-    "uri": "http://onto-ns.com/1/ctd_data_munkholmen",
+    "uri": "http://onto-ns.com/meta/oceanlab/1/ctd_data_munkholmen",
     "description": "ctd_data_munkholmen",
     "dimensions": {
         "N": "Number of samples"
@@ -15,7 +15,7 @@
         },
         "density": {
             "type": "float",
-            "unit": "kg/cm³",
+            "unit": "kg/cm^3",
             "shape": [
                 "N"
             ],
@@ -23,7 +23,6 @@
         },
         "pressure": {
             "type": "float",
-            "unit": "none",
             "shape": [
                 "N"
             ],
@@ -39,7 +38,7 @@
         },
         "temperature": {
             "type": "float",
-            "unit": "Cel",
+            "unit": "C",
             "shape": [
                 "N"
             ],
