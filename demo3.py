@@ -174,7 +174,7 @@ try:
         (
             "http://onto-ns.com/meta/0.4/HallPetch2#doubletheta",
             "http://emmo.info/oteio#hasPypiPackageName",
-            "git+https://github.com/quaat/treesa_math",
+            "git+https://github.com/Treesarj/treesa_math",
         ),
     ]
     function_mappings = client.create_mapping(
