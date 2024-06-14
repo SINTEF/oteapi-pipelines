@@ -36,14 +36,6 @@
             ],
             "description": "salinity"
         },
-        "temperature": {
-            "type": "float",
-            "unit": "C",
-            "shape": [
-                "N"
-            ],
-            "description": "temperature"
-        },
         "time": {
             "type": "datetime",
             "shape": [
