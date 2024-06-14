@@ -15,10 +15,12 @@ services:
       OTEAPI_REDIS_HOST: redis
       OTEAPI_REDIS_PORT: 6379
       OTEAPI_prefix: "${OTEAPI_prefix:-/api/v1}"   
-      OTEAPI_PLUGIN_PACKAGES: 'git+https://github.com/SINTEF/oteapi-dlite-Mod@master' # NOTE! Branch under development
+      OTEAPI_PLUGIN_PACKAGES: 'git+https://github.com/SINTEF/oteapi-dlite-Mod@add_influxdb_parser_oceanlab_demo' # NOTE! Branch under development
+      # OTEAPI_PLUGIN_PACKAGES: "-v -e /oteapi-dlite"
     volumes:
       - "./entities:/entities"
       - "./output:/output"
+      # - "./oteapi-dlite:/oteapi-dlite"
 
   redis:
     image: redis:latest
