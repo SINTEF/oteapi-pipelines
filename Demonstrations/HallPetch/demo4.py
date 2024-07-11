@@ -1,5 +1,6 @@
 # Import necessary libraries
 import json
+
 from otelib import OTEClient
 
 # Initialize the OTEAPI client pointing to the API's base URL.
@@ -54,7 +55,9 @@ try:
             "http://hall_petch.info/hp.GrainSize",
         ),
     ]
-    mapping = client.create_mapping(mappingType="mappings", triples=dataMappings)
+    mapping = client.create_mapping(
+        mappingType="mappings", triples=dataMappings
+    )
     print(mapping.strategy_id)
 except Exception as e:
     print(f"Error creating mapping: {e}")
@@ -71,9 +74,11 @@ try:
             "http://onto-ns.com/meta/0.4/HallPetch3#k3",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://hall_petch.info/hp.Coefficient",
-        )
+        ),
     ]
-    mapping2 = client.create_mapping(mappingType="mappings", triples=dataMappings2)
+    mapping2 = client.create_mapping(
+        mappingType="mappings", triples=dataMappings2
+    )
     print(mapping2.strategy_id)
 except Exception as e:
     print(f"Error creating second mapping: {e}")

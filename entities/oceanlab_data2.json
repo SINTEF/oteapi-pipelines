@@ -1,0 +1,54 @@
+{
+    "uri": "http://onto-ns.com/meta/oceanlab/2/ctd_data_munkholmen",
+    "description": "ctd_data_munkholmen",
+    "dimensions": [
+        {
+            "name": "N",
+            "description": "Number of samples"
+        }
+    ],
+    "properties": [
+        {
+            "name": "conductivity",
+            "type": "float",
+            "unit": "S/m",
+            "dims": [
+                "N"
+            ],
+            "description": "conductivity"
+        },
+        {
+            "name": "density",
+            "type": "float",
+            "unit": "kg/cm^3",
+            "dims": [
+                "N"
+            ],
+            "description": "density"
+        },
+        {
+            "name": "pressure",
+            "type": "float",
+            "dims": [
+                "N"
+            ],
+            "description": "pressure"
+        },
+        {
+            "name": "salinity",
+            "type": "float",
+            "dims": [
+                "N"
+            ],
+            "description": "salinity"
+        },
+        {
+            "name": "time",
+            "type": "string",
+            "dims": [
+                "N"
+            ],
+            "description": "timestamp"
+        }
+    ]
+}
