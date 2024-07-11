@@ -14,7 +14,7 @@ To run the demo:
 
 ### Demo2
 
-This extracts just the salinity from the influxdb 
+This extracts just the salinity from the influxdb
 
 To run the demo:
 `bash
@@ -22,7 +22,7 @@ To run the demo:
 	`
 ### Demo3
 
-This extracts the salinity and transforms it to knudsen salinity 
+This extracts the salinity and transforms it to knudsen salinity
 
 To run the demo:
 `bash

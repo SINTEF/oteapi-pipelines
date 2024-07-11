@@ -1,9 +1,9 @@
 # Import necessary libraries
 import json
-
-from otelib import OTEClient
-from dotenv import load_dotenv
 import os
+
+from dotenv import load_dotenv
+from otelib import OTEClient
 
 load_dotenv()
 
@@ -83,11 +83,10 @@ try:
             "http://emmo.info/domain-mappings#mapsTo",
             "http://www.wikidata.org/entity/Q186885",
         ),
-        
-      
-      
     ]
-    mapping = client.create_mapping(mappingType="mappings", triples=dataMappings)
+    mapping = client.create_mapping(
+        mappingType="mappings", triples=dataMappings
+    )
     print(mapping.strategy_id)
 except Exception as e:
     print(f"Error creating mapping_for_results mapping: {e}")
@@ -120,7 +119,7 @@ except Exception as e:
 # function mappings --> but eventually this be extracted from a triplestore
 try:
     function_ontology_mappings = [
-       (
+        (
             "http://onto-ns.com/meta/0.4/HallPetch2#ToKnudsen",
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
             "https://w3id.org/function/ontology#Function",
@@ -207,8 +206,8 @@ try:
     print(function_mappings.strategy_id)
 except Exception as e:
     print(f"Error creating second mapping: {e}")
-    
-    
+
+
 # Create a function to generate output based on the specified configuration.
 try:
     generate = client.create_function(
@@ -226,7 +225,9 @@ except Exception as e:
 
 # Build the data pipeline by chaining together the data resource, parser, mappings, and generate function.
 try:
-    pipeline = parser >> mapping >> mapping_salinity >> function_mappings >> generate
+    pipeline = (
+        parser >> mapping >> mapping_salinity >> function_mappings >> generate
+    )
 
     # Execute the pipeline and process the data.
     result = pipeline.get().decode("utf-8")

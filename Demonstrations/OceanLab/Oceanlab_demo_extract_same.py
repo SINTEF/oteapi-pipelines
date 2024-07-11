@@ -1,9 +1,9 @@
 # Import necessary libraries
 import json
-
-from otelib import OTEClient
-from dotenv import load_dotenv
 import os
+
+from dotenv import load_dotenv
+from otelib import OTEClient
 
 load_dotenv()
 
@@ -78,9 +78,7 @@ try:
             "http://emmo.info/domain-mappings#mapsTo",
             "http://www.wikidata.org/entity/Q186885",
         ),
-        
-        
-         (
+        (
             "http://onto-ns.com/meta/oceanlab/2/ctd_data_munkholmen#salinity",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#sea_water_practical_salinity",
@@ -106,13 +104,14 @@ try:
             "http://www.wikidata.org/entity/Q186885",
         ),
     ]
-    mapping = client.create_mapping(mappingType="mappings", triples=dataMappings)
+    mapping = client.create_mapping(
+        mappingType="mappings", triples=dataMappings
+    )
     print(mapping.strategy_id)
 except Exception as e:
     print(f"Error creating mapping_for_results mapping: {e}")
 
-  
-    
+
 # Create a function to generate output based on the specified configuration.
 try:
     generate = client.create_function(
