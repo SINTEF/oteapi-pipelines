@@ -192,7 +192,7 @@ try:
         (
             "http://onto-ns.com/meta/0.4/HallPetch2#ToKnudsen",
             "http://emmo.info/oteio#hasPythonModuleName",
-            "src.mymath.util",
+            "mymath.util",
         ),
         (
             "http://onto-ns.com/meta/0.4/HallPetch2#ToKnudsen",
