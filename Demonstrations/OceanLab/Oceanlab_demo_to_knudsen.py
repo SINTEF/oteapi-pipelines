@@ -61,7 +61,7 @@ try:
         (
             "http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#sea_water_practical_salinity",
             "http://emmo.info/domain-mappings#mapsTo",
-            "http://fun.info#v",
+            "https://w3id.org/function/ontology#input_practical_salinity",
         ),
         (
             "http://onto-ns.com/meta/oceanlab/1/ctd_data_munkholmen#pressure",
@@ -101,7 +101,7 @@ try:
         (
             "http://hall_petch.info/ToKnudsen",
             "http://emmo.info/domain-mappings#mapsTo",
-            "http://fun.info#ret",
+            "https://w3id.org/function/ontology#returned_knudsen_salinity",
         ),
         (
             "http://onto-ns.com/meta/oceanlab/1/ctd_salinity_munkholmen#time",
@@ -120,83 +120,59 @@ except Exception as e:
 try:
     function_ontology_mappings = [
         (
-            "http://onto-ns.com/meta/0.4/HallPetch2#ToKnudsen",
+            "https://w3id.org/function/ontology#convert_to_knudsen",
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
             "https://w3id.org/function/ontology#Function",
         ),
         (
-            "http://onto-ns.com/meta/0.4/HallPetch2#ToKnudsen",
-            "http://www.w3.org/2000/01/rdf-schema#label",
-            '"ToKnudsen"@en',
-        ),
-        (
-            "http://onto-ns.com/meta/0.4/HallPetch2#ToKnudsen",
+            "https://w3id.org/function/ontology#convert_to_knudsen",
             "https://w3id.org/function/ontology#expects",
-            "_:http://onto-ns.com/meta/0.4/HallPetch2#ToKnudsen_parlist",
+            "https://w3id.org/function/ontology#salinity",
+            
         ),
         (
-            "http://onto-ns.com/meta/0.4/HallPetch2#ToKnudsen",
+            "https://w3id.org/function/ontology#convert_to_knudsen",
             "https://w3id.org/function/ontology#returns",
-            "_:http://onto-ns.com/meta/0.4/HallPetch2#ToKnudsen_outlist",
+            "https://w3id.org/function/ontology#knudsen_salinity",
         ),
         (
-            "http://onto-ns.com/meta/0.4/HallPetch2#ToKnudsen_parameter1_v",
+            "https://w3id.org/function/ontology#salinity",
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
             "https://w3id.org/function/ontology#Parameter",
         ),
         (
-            "http://onto-ns.com/meta/0.4/HallPetch2#ToKnudsen_parameter1_v",
+            "https://w3id.org/function/ontology#salinity",
             "http://www.w3.org/2000/01/rdf-schema#label",
             '"v"@en',
         ),
         (
-            "http://onto-ns.com/meta/0.4/HallPetch2#ToKnudsen_parameter1_v",
-            "http://emmo.info/domain-mappings#mapsTo",
-            "http://fun.info#v",
+            "https://w3id.org/function/ontology#salinity",
+            "http://emmo.info/domain-mappings#mapsTo", 
+            "https://w3id.org/function/ontology#input_practical_salinity",
         ),
         (
-            "_:http://onto-ns.com/meta/0.4/HallPetch2#ToKnudsen_parlist",
-            "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
-            "http://onto-ns.com/meta/0.4/HallPetch2#ToKnudsen_parameter1_v",
-        ),
-        (
-            "_:http://onto-ns.com/meta/0.4/HallPetch2#ToKnudsen_parlist",
-            "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
-            "http://www.w3.org/1999/02/22-rdf-syntax-ns#nil",
-        ),
-        (
-            "http://onto-ns.com/meta/0.4/HallPetch2#ToKnudsen_output1",
+            "https://w3id.org/function/ontology#knudsen_salinity",
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
             "https://w3id.org/function/ontology#Output",
         ),
         (
-            "http://onto-ns.com/meta/0.4/HallPetch2#ToKnudsen_output1",
-            "http://emmo.info/domain-mappings#mapsTo",
-            "http://fun.info#ret",
+            "https://w3id.org/function/ontology#knudsen_salinity",
+            "http://emmo.info/domain-mappings#mapsTo", 
+            "https://w3id.org/function/ontology#returned_knudsen_salinity",
         ),
         (
-            "_:http://onto-ns.com/meta/0.4/HallPetch2#ToKnudsen_outlist",
-            "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
-            "http://onto-ns.com/meta/0.4/HallPetch2#ToKnudsen_output1",
-        ),
-        (
-            "_:http://onto-ns.com/meta/0.4/HallPetch2#ToKnudsen_outlist",
-            "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
-            "http://www.w3.org/1999/02/22-rdf-syntax-ns#nil",
-        ),
-        (
-            "http://onto-ns.com/meta/0.4/HallPetch2#ToKnudsen",
-            "http://emmo.info/oteio#hasPythonFunctionName",
+            "https://w3id.org/function/ontology#convert_to_knudsen",
+            "http://emmo.info/oteio#hasPythonFunctionName", # this cannot be changed as tripper uses this ontology : https://github.com/emmo-repo/domain-oteio
             "to_knudsen",
         ),
         (
-            "http://onto-ns.com/meta/0.4/HallPetch2#ToKnudsen",
-            "http://emmo.info/oteio#hasPythonModuleName",
+            "https://w3id.org/function/ontology#convert_to_knudsen",
+            "http://emmo.info/oteio#hasPythonModuleName", # this cannot be changed as tripper uses this ontology : https://github.com/emmo-repo/domain-oteio
             "mymath.util",
         ),
         (
-            "http://onto-ns.com/meta/0.4/HallPetch2#ToKnudsen",
-            "http://emmo.info/oteio#hasPypiPackageName",
+            "https://w3id.org/function/ontology#convert_to_knudsen",
+            "http://emmo.info/oteio#hasPypiPackageName", # this cannot be changed as tripper uses this ontology : https://github.com/emmo-repo/domain-oteio
             "git+https://github.com/Treesarj/converters",
         ),
     ]

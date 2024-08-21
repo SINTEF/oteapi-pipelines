@@ -1,0 +1,24 @@
+{
+    "uri": "http://onto-ns.com/meta/oceanlab/1/ctd_conductivity_munkholmen",
+    "description": "ctd_conductivity_munkholmen",
+    "dimensions": {
+        "N": "Number of samples"
+    },
+    "properties": {
+        "conductivity": {
+            "type": "float",
+            "unit": "S/m",
+            "shape": [
+                "N"
+            ],
+            "description": "conductivity"
+        },
+        "time": {
+            "type": "datetime",
+            "shape": [
+                "N"
+            ],
+            "description": "timestamp"
+        }
+    }
+}
