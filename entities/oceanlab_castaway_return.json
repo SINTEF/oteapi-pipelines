@@ -1,0 +1,49 @@
+{
+  "uri": "http://onto-ns.com/meta/1/castawayreturn",
+  "description": "Data from a CastAway device",
+  "dimensions": [
+    {
+      "name": "num_samples",
+      "description": "Number of samples"
+    }
+  ],
+  "properties": [
+    {
+      "name": "pressure",
+      "type": "float",
+      "unit": "dbar",
+      "shape": ["num_samples"],
+      "description": "The force exerted by the weight of the water column above the sensor"
+    },
+    {
+      "name": "depth",
+      "type": "float",
+      "unit": "m",
+      "shape": ["num_samples"],
+      "description": "The vertical distance below the water surface where measurements are taken"
+    },
+    {
+      "name": "samples_per_second",
+      "type": "string",
+      "description": "The sampling rate, indicating how many samples were taken per second"
+    },
+    {
+      "name": "cast_time_utc",
+      "type": "string",
+      "description": "The time the data collection started in Coordinated Universal Time"
+    },
+    {
+      "name": "temperature",
+      "type": "float",
+      "unit": "degC",
+      "shape": ["num_samples"],
+      "description": "The measure of the water"
+    },
+    {
+      "name": "salinity",
+      "type": "float",
+      "shape": ["num_samples"],
+      "description": "The concentration of dissolved salts in the water"
+    }
+  ]
+}
