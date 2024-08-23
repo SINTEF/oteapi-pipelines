@@ -14,7 +14,7 @@
             "description": "density"
         },
         "time": {
-            "type": "datetime",
+            "type": "string",
             "shape": [
                 "N"
             ],
