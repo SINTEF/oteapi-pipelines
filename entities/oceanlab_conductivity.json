@@ -14,7 +14,7 @@
             "description": "conductivity"
         },
         "time": {
-            "type": "datetime",
+            "type": "string",
             "shape": [
                 "N"
             ],

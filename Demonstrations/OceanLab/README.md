@@ -28,3 +28,12 @@ To run the demo:
 `bash
 	python Oceanlab_demo_to_knudsen.py
 	`
+
+### Demo4
+
+This extracts the castaway data from a csv file and saves the collection instance to the output folder
+To run this demo the custom csv parser plugin must be used with ote-services.
+To run the demo:
+`bash
+	python Oceanlab_demo_csv_castaway.py
+	`

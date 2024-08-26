@@ -128,7 +128,6 @@ try:
             "https://w3id.org/function/ontology#convert_to_knudsen",
             "https://w3id.org/function/ontology#expects",
             "https://w3id.org/function/ontology#salinity",
-            
         ),
         (
             "https://w3id.org/function/ontology#convert_to_knudsen",
@@ -147,7 +146,7 @@ try:
         ),
         (
             "https://w3id.org/function/ontology#salinity",
-            "http://emmo.info/domain-mappings#mapsTo", 
+            "http://emmo.info/domain-mappings#mapsTo",
             "https://w3id.org/function/ontology#input_practical_salinity",
         ),
         (
@@ -157,22 +156,22 @@ try:
         ),
         (
             "https://w3id.org/function/ontology#knudsen_salinity",
-            "http://emmo.info/domain-mappings#mapsTo", 
+            "http://emmo.info/domain-mappings#mapsTo",
             "https://w3id.org/function/ontology#returned_knudsen_salinity",
         ),
         (
             "https://w3id.org/function/ontology#convert_to_knudsen",
-            "http://emmo.info/oteio#hasPythonFunctionName", # this cannot be changed as tripper uses this ontology : https://github.com/emmo-repo/domain-oteio
+            "http://emmo.info/oteio#hasPythonFunctionName",  # this cannot be changed as tripper uses this ontology : https://github.com/emmo-repo/domain-oteio
             "to_knudsen",
         ),
         (
             "https://w3id.org/function/ontology#convert_to_knudsen",
-            "http://emmo.info/oteio#hasPythonModuleName", # this cannot be changed as tripper uses this ontology : https://github.com/emmo-repo/domain-oteio
+            "http://emmo.info/oteio#hasPythonModuleName",  # this cannot be changed as tripper uses this ontology : https://github.com/emmo-repo/domain-oteio
             "mymath.util",
         ),
         (
             "https://w3id.org/function/ontology#convert_to_knudsen",
-            "http://emmo.info/oteio#hasPypiPackageName", # this cannot be changed as tripper uses this ontology : https://github.com/emmo-repo/domain-oteio
+            "http://emmo.info/oteio#hasPypiPackageName",  # this cannot be changed as tripper uses this ontology : https://github.com/emmo-repo/domain-oteio
             "git+https://github.com/Treesarj/converters",
         ),
     ]

@@ -1,0 +1,175 @@
+{
+  "uri": "http://onto-ns.com/meta/1/castaway",
+  "description": "Data from a CastAway device",
+  "dimensions": [
+      {
+          "name": "num_samples",
+          "description": "Number of samples"
+      }
+  ],
+  "properties": [
+      {
+          "name": "device",
+          "type": "string",
+          "description": "Identifier of the device used for data collection"
+      },
+      {
+          "name": "filename",
+          "type": "string",
+          "description": "The name of the data file, which likely includes the device ID and the timestamp of data collection"
+      },
+      {
+          "name": "cast_time_utc",
+          "type": "string",
+          "description": "The time the data collection started in Coordinated Universal Time"
+      },
+      {
+          "name": "cast_time_local",
+          "type": "string",
+          "description": "The time the data collection started in local time"
+      },
+      {
+          "name": "sample_type",
+          "type": "string",
+          "description": "The type of data collected (Cast)"
+      },
+      {
+          "name": "cast_data",
+          "type": "string",
+          "description": "Raw or processed data"
+      },
+      {
+          "name": "location_source",
+          "type": "string",
+          "description": "The data source for location information (GPS)"
+      },
+      {
+          "name": "latitude_default",
+          "type": "string",
+          "description": "A default latitude value used for reference"
+      },
+      {
+          "name": "altitude_default",
+          "type": "string",
+          "description": "A default altitude value used for reference"
+      },
+      {
+          "name": "latitude_start",
+          "type": "string",
+          "description": "The latitude at the start of the data collection"
+      },
+      {
+          "name": "longitude_start",
+          "type": "string",
+          "description": "The longitude at the start of the data collection"
+      },
+      {
+          "name": "altitude_start",
+          "type": "string",
+          "description": "The altitude at the start of the data collection"
+      },
+      {
+          "name": "gps_horizontal_error_start",
+          "type": "string",
+          "description": "The horizontal accuracy of the GPS at the start of data collection"
+      },
+      {
+          "name": "gps_vertical_error_start",
+          "type": "string",
+          "description": "The vertical accuracy of the GPS at the start of data collection"
+      },
+      {
+          "name": "gps_number_of_satellites_start",
+          "type": "string",
+          "description": "The number of GPS satellites available at the start of data collection"
+      },
+      {
+          "name": "latitude_end",
+          "type": "string",
+          "description": "The latitude at the end of the data collection"
+      },
+      {
+          "name": "longitude_end",
+          "type": "string",
+          "description": "The longitude at the end of the data collection"
+      },
+      {
+          "name": "altitude_end",
+          "type": "string",
+          "description": "The altitude at the end of the data collection"
+      },
+      {
+          "name": "gps_horizontal_error_end",
+          "type": "string",
+          "description": "The horizontal accuracy of the GPS at the end of data collection"
+      },
+      {
+          "name": "gps_vertical_error_end",
+          "type": "string",
+          "description": "The vertical accuracy of the GPS at the end of data collection"
+      },
+      {
+          "name": "gps_number_of_satellites_end",
+          "type": "string",
+          "description": "The number of GPS satellites available at the end of data collection"
+      },
+      {
+          "name": "cast_duration",
+          "type": "string",
+          "unit": "seconds",
+          "description": "The total duration of the data collection"
+      },
+      {
+          "name": "samples_per_second",
+          "type": "string",
+          "description": "The sampling rate, indicating how many samples were taken per second"
+      },
+      {
+          "name": "electronics_calibration_date",
+          "type": "string",
+          "description": "The date when the electronics were last calibrated"
+      },
+      {
+          "name": "conductivity_calibration_date",
+          "type": "string",
+          "description": "The date when the conductivity sensor was last calibrated"
+      },
+      {
+          "name": "temperature_calibration_date",
+          "type": "string",
+          "description": "The date when the temperature sensor was last calibrated"
+      },
+      {
+          "name": "pressure_calibration_date",
+          "type": "string",
+          "description": "The date when the pressure sensor was last calibrated"
+      },
+      {
+          "name": "pressure",
+          "type": "float",
+          "unit": "dbar",
+          "shape": ["num_samples"],
+          "description": "The force exerted by the weight of the water column above the sensor"
+      },
+      {
+          "name": "depth",
+          "type": "float",
+          "unit": "m",
+          "shape": ["num_samples"],
+          "description": "The vertical distance below the water surface where measurements are taken"
+      },
+      {
+          "name": "temperature",
+          "type": "float",
+          "unit": "degC",
+          "shape": ["num_samples"],
+          "description": "The measure of the water"
+      },
+      {
+          "name": "salinity",
+          "type": "float",
+          "shape": ["num_samples"],
+          "description": "The concentration of dissolved salts in the water"
+      }
+  ]
+}
