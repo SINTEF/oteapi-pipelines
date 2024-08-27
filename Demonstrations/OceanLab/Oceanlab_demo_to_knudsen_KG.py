@@ -105,12 +105,13 @@ try:
         ),
     ]
     mapping_salinity = client.create_mapping(
-        mappingType="mappings", triples=dataMappings_salinity,
+        mappingType="mappings",
+        triples=dataMappings_salinity,
         configuration={
             "sparql_endpoint": "http://fuseki:3030/oceanlab/query",
             "graph_uri": "http://www.semanticweb.org/ocean_functions/oceanlab/0.0.1",
-            "username":"admin",
-            "password":"test"
+            "username": "admin",
+            "password": "test",
             # Add username and password if required
         },
     )
@@ -135,9 +136,7 @@ except Exception as e:
 
 # Build the data pipeline by chaining together the data resource, parser, mappings, and generate function.
 try:
-    pipeline = (
-        parser >> mapping >> mapping_salinity  >> generate
-    )
+    pipeline = parser >> mapping >> mapping_salinity >> generate
 
     # Execute the pipeline and process the data.
     result = pipeline.get().decode("utf-8")

@@ -48,4 +48,3 @@ To run the demo:
 - `bash
 	python Oceanlab_demo_to_knudsen_KG.py
 	`
-
