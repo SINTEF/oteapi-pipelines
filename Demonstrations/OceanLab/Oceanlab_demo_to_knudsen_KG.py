@@ -105,83 +105,18 @@ try:
         ),
     ]
     mapping_salinity = client.create_mapping(
-        mappingType="mappings", triples=dataMappings_salinity
+        mappingType="mappings", triples=dataMappings_salinity,
+        configuration={
+            "sparql_endpoint": "http://fuseki:3030/oceanlab/query",
+            "graph_uri": "http://www.semanticweb.org/ocean_functions/oceanlab/0.0.1",
+            "username":"admin",
+            "password":"test"
+            # Add username and password if required
+        },
     )
     print(mapping_salinity.strategy_id)
 except Exception as e:
     print(f"Error creating mapping_salinity: {e}")
-
-# function mappings --> but eventually this be extracted from a triplestore
-try:
-    function_ontology_mappings = [
-        (
-            "https://w3id.org/function/ontology#convert_to_knudsen",
-            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-            "https://w3id.org/function/ontology#Function",
-        ),
-        (
-            "https://w3id.org/function/ontology#convert_to_knudsen",
-            "https://w3id.org/function/ontology#expects",
-            "https://w3id.org/function/ontology#salinity",
-        ),
-        (
-            "https://w3id.org/function/ontology#convert_to_knudsen",
-            "https://w3id.org/function/ontology#returns",
-            "https://w3id.org/function/ontology#knudsen_salinity",
-        ),
-        (
-            "https://w3id.org/function/ontology#salinity",
-            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-            "https://w3id.org/function/ontology#Parameter",
-        ),
-        (
-            "https://w3id.org/function/ontology#salinity",
-            "http://www.w3.org/2000/01/rdf-schema#label",
-            '"v"@en',
-        ),
-        (
-            "https://w3id.org/function/ontology#salinity",
-            "http://emmo.info/domain-mappings#mapsTo",
-            "https://w3id.org/function/ontology#input_practical_salinity",
-        ),
-        (
-            "https://w3id.org/function/ontology#knudsen_salinity",
-            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-            "https://w3id.org/function/ontology#Output",
-        ),
-        (
-            "https://w3id.org/function/ontology#knudsen_salinity",
-            "http://emmo.info/domain-mappings#mapsTo",
-            "http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#sea_water_knudsen_salinity",
-        ),
-        (
-            "https://w3id.org/function/ontology#knudsen_salinity",
-            "http://emmo.info/domain-mappings#mapsTo",
-            "https://w3id.org/function/ontology#returned_knudsen_salinity",
-        ),
-        (
-            "https://w3id.org/function/ontology#convert_to_knudsen",
-            "http://emmo.info/oteio#hasPythonFunctionName",  # this cannot be changed as tripper uses this ontology : https://github.com/emmo-repo/domain-oteio
-            "to_knudsen",
-        ),
-        (
-            "https://w3id.org/function/ontology#convert_to_knudsen",
-            "http://emmo.info/oteio#hasPythonModuleName",  # this cannot be changed as tripper uses this ontology : https://github.com/emmo-repo/domain-oteio
-            "mymath.util",
-        ),
-        (
-            "https://w3id.org/function/ontology#convert_to_knudsen",
-            "http://emmo.info/oteio#hasPypiPackageName",  # this cannot be changed as tripper uses this ontology : https://github.com/emmo-repo/domain-oteio
-            "git+https://github.com/Treesarj/converters",
-        ),
-    ]
-    function_mappings = client.create_mapping(
-        mappingType="mappings", triples=function_ontology_mappings
-    )
-    print(function_mappings.strategy_id)
-except Exception as e:
-    print(f"Error creating second mapping: {e}")
-
 
 # Create a function to generate output based on the specified configuration.
 try:
@@ -201,7 +136,7 @@ except Exception as e:
 # Build the data pipeline by chaining together the data resource, parser, mappings, and generate function.
 try:
     pipeline = (
-        parser >> mapping >> mapping_salinity >> function_mappings >> generate
+        parser >> mapping >> mapping_salinity  >> generate
     )
 
     # Execute the pipeline and process the data.

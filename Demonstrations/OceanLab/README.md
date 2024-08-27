@@ -37,3 +37,15 @@ To run the demo:
 `bash
 	python Oceanlab_demo_csv_castaway.py
 	`
+
+### Demo5
+
+This is the demo , same as Demo3, but fetching the relations from KG.
+
+To run the demo:
+- Create a graph with uri: http://www.semanticweb.org/ocean_functions/oceanlab/0.0.1
+- Populate it with KG_V1.rdf in input folder
+- `bash
+	python Oceanlab_demo_to_knudsen_KG.py
+	`
+

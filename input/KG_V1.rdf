@@ -1,0 +1,287 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ocean_functions/oceanlab/0.0.1/"
+     xml:base="http://www.semanticweb.org/ocean_functions/oceanlab/0.0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:oteio="http://emmo.info/oteio#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/"
+     xmlns:Oceanlab="http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#"
+     xmlns:ontology="https://w3id.org/function/ontology#"
+     xmlns:domain-mappings="http://emmo.info/domain-mappings#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ocean_functions/oceanlab/0.0.1"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/function/ontology#expects -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/function/ontology#expects"/>
+    
+
+
+    <!-- https://w3id.org/function/ontology#returns -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/function/ontology#returns"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://emmo.info/domain-mappings#mapsTo -->
+
+    <owl:ObjectProperty rdf:about="http://emmo.info/domain-mappings#mapsTo"/>
+    
+
+
+    <!-- https://w3id.org/function/ontology#expects -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/function/ontology#expects"/>
+    
+
+
+    <!-- https://w3id.org/function/ontology#returns -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/function/ontology#returns"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://emmo.info/oteio#hasPypiPackageName -->
+
+    <owl:DatatypeProperty rdf:about="http://emmo.info/oteio#hasPypiPackageName"/>
+    
+
+
+    <!-- http://emmo.info/oteio#hasPythonFunctionName -->
+
+    <owl:DatatypeProperty rdf:about="http://emmo.info/oteio#hasPythonFunctionName"/>
+    
+
+
+    <!-- http://emmo.info/oteio#hasPythonModuleName -->
+
+    <owl:DatatypeProperty rdf:about="http://emmo.info/oteio#hasPythonModuleName"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#Temporal_Properties -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#Temporal_Properties">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Property"/>
+        <rdfs:label>Temporal Properties</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#hydrographic_properties -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#hydrographic_properties">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ocean_functions/oceanlab/0.0.1#Physical_Properties"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#sea_water_knudsen_salinity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#sea_water_knudsen_salinity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#sea_water_salinity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#sea_water_practical_salinity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#sea_water_practical_salinity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#sea_water_salinity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#sea_water_salinity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#sea_water_salinity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#hydrographic_properties"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ocean_functions/oceanlab/0.0.1#Physical_Properties -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ocean_functions/oceanlab/0.0.1#Physical_Properties">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Property"/>
+        <rdfs:label>Physical Properties</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ocean_functions/oceanlab/0.0.1#function_properties -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ocean_functions/oceanlab/0.0.1#function_properties">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ocean_functions/oceanlab/0.0.1#parentclass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ocean_functions/oceanlab/0.0.1#parentclass"/>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/Property -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/Property">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ocean_functions/oceanlab/0.0.1#parentclass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q186885 -->
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q186885">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#Temporal_Properties"/>
+        <rdfs:label>time</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/function/ontology#Function -->
+
+    <owl:Class rdf:about="https://w3id.org/function/ontology#Function">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ocean_functions/oceanlab/0.0.1#function_properties"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/function/ontology#Output -->
+
+    <owl:Class rdf:about="https://w3id.org/function/ontology#Output">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ocean_functions/oceanlab/0.0.1#function_properties"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/function/ontology#Parameter -->
+
+    <owl:Class rdf:about="https://w3id.org/function/ontology#Parameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ocean_functions/oceanlab/0.0.1#function_properties"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#sea_water_knudsen_salinity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#sea_water_knudsen_salinity"/>
+    
+
+
+    <!-- https://w3id.org/function/ontology#convert_to_knudsen -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/function/ontology#convert_to_knudsen">
+        <rdf:type rdf:resource="https://w3id.org/function/ontology#Function"/>
+        <ontology:expects rdf:resource="https://w3id.org/function/ontology#salinity"/>
+        <ontology:returns rdf:resource="https://w3id.org/function/ontology#knudsen_salinity"/>
+        <oteio:hasPypiPackageName>git+https://github.com/Treesarj/converters</oteio:hasPypiPackageName>
+        <oteio:hasPythonFunctionName>to_knudsen</oteio:hasPythonFunctionName>
+        <oteio:hasPythonModuleName>mymath.util</oteio:hasPythonModuleName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/function/ontology#input_practical_salinity -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/function/ontology#input_practical_salinity"/>
+    
+
+
+    <!-- https://w3id.org/function/ontology#knudsen_salinity -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/function/ontology#knudsen_salinity">
+        <rdf:type rdf:resource="https://w3id.org/function/ontology#Output"/>
+        <domain-mappings:mapsTo rdf:resource="http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#sea_water_knudsen_salinity"/>
+        <domain-mappings:mapsTo rdf:resource="https://w3id.org/function/ontology#returned_knudsen_salinity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/function/ontology#returned_knudsen_salinity -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/function/ontology#returned_knudsen_salinity"/>
+    
+
+
+    <!-- https://w3id.org/function/ontology#salinity -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/function/ontology#salinity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#sea_water_practical_salinity"/>
+        <rdf:type rdf:resource="https://w3id.org/function/ontology#Parameter"/>
+        <domain-mappings:mapsTo rdf:resource="https://w3id.org/function/ontology#input_practical_salinity"/>
+        <rdfs:label>&quot;v&quot;@en</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
