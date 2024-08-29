@@ -1,5 +1,6 @@
 # Import necessary libraries
 import json
+
 from otelib import OTEClient
 
 try:

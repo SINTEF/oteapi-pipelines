@@ -1,5 +1,6 @@
 # Import necessary libraries
 import json
+
 from otelib import OTEClient
 
 try:
@@ -229,7 +230,9 @@ try:
             "http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#pressure_calibration_date",
         ),
     ]
-    input_mapping = client.create_mapping(mappingType="mappings", triples=dataMappings)
+    input_mapping = client.create_mapping(
+        mappingType="mappings", triples=dataMappings
+    )
     print(input_mapping.strategy_id)
 except Exception as e:
     print(f"Error creating mapping_for_results mapping: {e}")
