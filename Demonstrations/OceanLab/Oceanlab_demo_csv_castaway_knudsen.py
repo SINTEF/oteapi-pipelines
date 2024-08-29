@@ -229,50 +229,36 @@ try:
             "http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#pressure_calibration_date",
         ),
     ]
-    input_mapping = client.create_mapping(
-        mappingType="mappings", triples=dataMappings
-    )
+    input_mapping = client.create_mapping(mappingType="mappings", triples=dataMappings)
     print(input_mapping.strategy_id)
 except Exception as e:
     print(f"Error creating mapping_for_results mapping: {e}")
 
 try:
-    dataMappings2 = [
+    dataMappings_salinity = [
         (
-            "http://onto-ns.com/meta/1/castawayreturn#salinity",
+            "http://onto-ns.com/meta/1/castawayreturn2#salinity",
             "http://emmo.info/domain-mappings#mapsTo",
-            "http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#sea_water_practical_salinity",
+            "http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#sea_water_knudsen_salinity",
         ),
         (
-            "http://onto-ns.com/meta/1/castawayreturn#pressure",
-            "http://emmo.info/domain-mappings#mapsTo",
-            "http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#sea_water_pressure",
-        ),
-        (
-            "http://onto-ns.com/meta/1/castawayreturn#temperature",
-            "http://emmo.info/domain-mappings#mapsTo",
-            "http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#temperature",
-        ),
-        (
-            "http://onto-ns.com/meta/1/castawayreturn#depth",
-            "http://emmo.info/domain-mappings#mapsTo",
-            "http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#depth",
-        ),
-        (
-            "http://onto-ns.com/meta/1/castawayreturn#time",
+            "http://onto-ns.com/meta/1/castawayreturn2#time",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://www.wikidata.org/entity/Q186885",
         ),
-        (
-            "http://onto-ns.com/meta/1/castawayreturn#samples_per_second",
-            "http://emmo.info/domain-mappings#mapsTo",
-            "http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#samples_per_second",
-        ),
     ]
-    generator_mapping = client.create_mapping(
-        mappingType="mappings", triples=dataMappings2
+    mapping_salinity = client.create_mapping(
+        mappingType="mappings",
+        triples=dataMappings_salinity,
+        configuration={
+            "sparql_endpoint": "http://fuseki:3030/oceanlab/query",
+            "graph_uri": "http://www.semanticweb.org/ocean_functions/oceanlab/0.0.1",
+            "username": "admin",
+            "password": "test",
+            # Add username and password if required
+        },
     )
-    print(generator_mapping.strategy_id)
+    print(mapping_salinity.strategy_id)
 except Exception as e:
     print(f"Error creating mapping_salinity: {e}")
 
@@ -284,7 +270,7 @@ try:
         configuration={
             "driver": "json",
             "location": "/output/hp.json",
-            "datamodel": "http://onto-ns.com/meta/1/castawayreturn",
+            "datamodel": "http://onto-ns.com/meta/1/castawayreturn2",
         },
     )
     print(generate.strategy_id)
@@ -294,7 +280,7 @@ except Exception as e:
 
 # Build the data pipeline by chaining together the data resource, parser, mappings, and generate function.
 try:
-    pipeline = parser >> input_mapping >> generator_mapping >> generate
+    pipeline = parser >> input_mapping >> mapping_salinity >> generate
 
     # Execute the pipeline and process the data.
     result = pipeline.get().decode("utf-8")

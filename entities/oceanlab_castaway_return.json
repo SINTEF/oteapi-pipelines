@@ -28,9 +28,9 @@
       "description": "The sampling rate, indicating how many samples were taken per second"
     },
     {
-      "name": "cast_time_utc",
+      "name": "time",
       "type": "string",
-      "description": "The time the data collection started in Coordinated Universal Time"
+      "description": "The cast_time_utc the data collection started in Coordinated Universal Time"
     },
     {
       "name": "temperature",

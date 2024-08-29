@@ -274,8 +274,8 @@
     <!-- https://w3id.org/function/ontology#salinity -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/function/ontology#salinity">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#sea_water_practical_salinity"/>
         <rdf:type rdf:resource="https://w3id.org/function/ontology#Parameter"/>
+	<domain-mappings:mapsTo rdf:resource="http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#sea_water_practical_salinity"/>
         <domain-mappings:mapsTo rdf:resource="https://w3id.org/function/ontology#input_practical_salinity"/>
         <rdfs:label>&quot;v&quot;@en</rdfs:label>
     </owl:NamedIndividual>

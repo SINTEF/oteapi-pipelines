@@ -1,0 +1,23 @@
+{
+  "uri": "http://onto-ns.com/meta/1/castawayreturn2",
+  "description": "Data from a CastAway device",
+  "dimensions": [
+    {
+      "name": "num_samples",
+      "description": "Number of samples"
+    }
+  ],
+  "properties": [
+    {
+      "name": "time",
+      "type": "string",
+      "description": "The cast_time_utc the data collection started in Coordinated Universal Time"
+    },
+    {
+      "name": "salinity",
+      "type": "float",
+      "shape": ["num_samples"],
+      "description": "The concentration of dissolved salts in the water"
+    }
+  ]
+}
