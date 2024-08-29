@@ -26,7 +26,9 @@ try:
         configuration={
             "storage_path": "/entities",
             "url": url,
+            "time_range": "-400h",
             "USER": USER,
+            "size_limit": 20,
             "PASSWORD": PASSWORD,
             "DATABASE": DATABASE,
             "RETPOLICY": RETPOLICY,

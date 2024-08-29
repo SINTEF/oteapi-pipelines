@@ -26,7 +26,9 @@ try:
         configuration={
             "storage_path": "/entities",
             "url": url,
+            "time_range": "-400h",
             "USER": USER,
+            "size_limit": 20,
             "PASSWORD": PASSWORD,
             "DATABASE": DATABASE,
             "RETPOLICY": RETPOLICY,
@@ -57,11 +59,6 @@ try:
             "http://onto-ns.com/meta/oceanlab/1/ctd_data_munkholmen#salinity",
             "http://emmo.info/domain-mappings#mapsTo",
             "http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#sea_water_practical_salinity",
-        ),
-        (
-            "http://www.semanticweb.org/ocean_data/cf_standards/Oceanlab/0.0.1#sea_water_practical_salinity",
-            "http://emmo.info/domain-mappings#mapsTo",
-            "https://w3id.org/function/ontology#input_practical_salinity",
         ),
         (
             "http://onto-ns.com/meta/oceanlab/1/ctd_data_munkholmen#pressure",
