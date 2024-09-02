@@ -327,12 +327,16 @@ try:
     print("Data is written out to output/oceanlab_demo.nc")
 
     # Ask if the user wants to load the file as an XArray Dataset and print it out.
-    response = input("Do you want to load the file as an XArray Dataset? (y/n): ")
+    response = input(
+        "Do you want to load the file as an XArray Dataset? (y/n): "
+    )
     if response.lower() == "y":
         try:
             import xarray as xr
         except ImportError:
-            print("The 'xarray' package is not installed. Please install it using 'pip install xarray' or similar.")
+            print(
+                "The 'xarray' package is not installed. Please install it using 'pip install xarray' or similar."
+            )
 
         # Load the NetCDF file as an XArray Dataset.
         ds = xr.open_dataset("output/oceanlab_demo.nc")
