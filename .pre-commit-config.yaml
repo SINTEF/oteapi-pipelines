@@ -12,8 +12,9 @@ ci:
   autoupdate_branch: 'main'
   autoupdate_commit_msg: '[pre-commit.ci] pre-commit autoupdate'
   autoupdate_schedule: 'weekly'
-  skip: ["pylint", "pylint-tests"]
+  skip: []
   submodules: false
+
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.6.0
@@ -54,28 +55,3 @@ repos:
     hooks:
     - id: mypy
       exclude: ^tests/.*$
-
-  - repo: local
-    hooks:
-    - id: pylint
-      name: pylint
-      entry: pylint
-      args:
-      - "--rcfile=pyproject.toml"
-      - "--extension-pkg-whitelist='pydantic'"
-      language: python
-      types: [python]
-      require_serial: true
-      files: ^.*$
-      exclude: ^tests/.*$
-    - id: pylint-tests
-      name: pylint - tests
-      entry: pylint
-      args:
-      - "--rcfile=pyproject.toml"
-      - "--extension-pkg-whitelist='pydantic'"
-      - "--disable=import-outside-toplevel,redefined-outer-name,import-error"
-      language: python
-      types: [python]
-      require_serial: true
-      files: ^tests/.*$

@@ -1,0 +1,40 @@
+services:
+  oteapi:
+    image: gitlab.sintef.no:5050/semanticmatter/oteapi/oteapi:latest
+    ports:
+      - 8080:8080
+    depends_on:
+      - redis
+    environment:
+      OTEAPI_REDIS_TYPE: redis
+      OTEAPI_REDIS_HOST: redis
+      OTEAPI_REDIS_PORT: 6379
+      OTEAPI_PREFIX: "${OTEAPI_PREFIX:-/api/v1}"
+      OTEAPI_PLUGIN_PACKAGES: '-v git+https://github.com/SINTEF/oteapi-dlite-Mod|-v git+https://github.com/SemanticMatter/oteapi-iliad'
+      # Set the GIT_AUTH_TOKEN env var locally, with access to GitHub's SemanticMatter/oteapi-iliad
+      GIT_AUTH_TOKEN:
+    volumes:
+      - "./entities:/entities"
+      - "./output:/output"
+      # - "${HOME}/venv/iliad/oteapi-dlite-Mod:/oteapi-dlite"
+      # - "${HOME}/venv/iliad/oteapi-iliad:/oteapi-iliad"
+    stop_grace_period: 1s
+
+  redis:
+    image: redis:latest
+    volumes:
+      - redis_data:/data
+
+  fuseki:
+    image: secoresearch/fuseki
+    container_name: fuseki
+    ports:
+      - "3030:3030"
+    environment:
+      ADMIN_PASSWORD: admin
+    volumes:
+      - fuseki_data:/fuseki
+
+volumes:
+  fuseki_data:
+  redis_data:
