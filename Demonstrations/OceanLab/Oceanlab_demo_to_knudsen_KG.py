@@ -8,8 +8,8 @@ from otelib import OTEClient
 load_dotenv()
 
 url = os.getenv("URL")
-USER = os.getenv("USER")
-PASSWORD = os.getenv("PASSWORD")
+USER = os.getenv("USER_OCEANLAB")
+PASSWORD = os.getenv("PASSWORD_OCEANLAB")
 DATABASE = os.getenv("DATABASE")
 RETPOLICY = os.getenv("RETPOLICY")
 
