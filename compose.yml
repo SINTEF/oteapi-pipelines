@@ -10,12 +10,19 @@ services:
       OTEAPI_REDIS_HOST: redis
       OTEAPI_REDIS_PORT: 6379
       OTEAPI_PREFIX: "${OTEAPI_PREFIX:-/api/v1}"
-      OTEAPI_PLUGIN_PACKAGES: '-v git+https://github.com/SINTEF/oteapi-dlite-Mod|-v git+https://github.com/SemanticMatter/oteapi-iliad'
-      # Set the GIT_AUTH_TOKEN env var locally, with access to GitHub's SemanticMatter/oteapi-iliad
+      OTEAPI_PLUGIN_PACKAGES: '-v git+https://github.com/SINTEF/oteapi-dlite-Mod'
+
+      ## Uncomment the following line (and uncomment the OTEAPI_PLUGIN_PACKAGES line above) to
+      # run the OceanLab demos.
+      # OTEAPI_PLUGIN_PACKAGES: '-v git+https://github.com/SINTEF/oteapi-dlite-Mod|-v git+https://github.com/SemanticMatter/oteapi-iliad'
+
+      ## Set the GIT_AUTH_TOKEN env var locally, with access to GitHub's SemanticMatter/oteapi-iliad
       GIT_AUTH_TOKEN:
+
     volumes:
       - "./entities:/entities"
       - "./output:/output"
+      ## The following lines can be uncommented to use local versions of the plugins
       # - "${HOME}/venv/iliad/oteapi-dlite-Mod:/oteapi-dlite"
       # - "${HOME}/venv/iliad/oteapi-iliad:/oteapi-iliad"
     stop_grace_period: 1s
